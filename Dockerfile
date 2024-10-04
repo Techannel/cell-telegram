@@ -10,4 +10,4 @@ COPY . .
 
 CMD ["python3", "bot.py"]
 
-ENV TERM=Linux
+ENV TERM=xterm
