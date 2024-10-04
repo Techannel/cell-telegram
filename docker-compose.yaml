@@ -1,0 +1,10 @@
+services:
+  bot:
+    container_name: "CellClaimer"
+    build:
+      context: .
+    stop_signal: SIGINT
+    restart: unless-stopped
+    command: "python3 bot.py"
+    volumes:
+      - .:/app
