@@ -2,7 +2,7 @@ FROM python:3.10-slim
 
 ENV TERM=xterm
 
-ENV ENVIRONMENT=linux
+ENV PYTHONUNBUFFERED=1
 
 WORKDIR /app
 
@@ -12,4 +12,4 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-CMD ["python3", "bot.py"]
+CMD ["python3", "-u", "bot.py"]
